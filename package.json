@@ -1,9 +1,9 @@
 {
 	"name": "imagemin-input",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"description": "Minify images",
 	"license": "MIT",
-	"repository": "007sair/imagemin",
+	"repository": "007sair/imagemin-input",
 	"engines": {
 		"node": ">=6"
 	},
