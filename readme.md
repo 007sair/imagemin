@@ -1,12 +1,27 @@
-# imagemin [![Build Status](https://travis-ci.org/imagemin/imagemin.svg?branch=master)](https://travis-ci.org/imagemin/imagemin)
+# imagemin-input [![Build Status](https://travis-ci.org/imagemin/imagemin.svg?branch=master)](https://travis-ci.org/imagemin/imagemin)
 
 > Minify images seamlessly
 
+Fork自[https://github.com/imagemin/imagemin](https://github.com/imagemin/imagemin)，在返回数据中增加了`input`字段
+
+```js
+// old
+{
+	data: <Buffer>,
+	path: <String>
+}
+// new
+{
+	data: <Buffer>,
+	path: <String>,
+	input: <String>
+}
+```
 
 ## Install
 
 ```
-$ npm install imagemin
+$ npm install imagemin-input
 ```
 
 

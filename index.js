@@ -26,6 +26,14 @@ const handleFile = (input, output, options) => fsP.readFile(input).then(data => 
 				path: (fileType(buffer) && fileType(buffer).ext === 'webp') ? replaceExt(dest, '.webp') : dest
 			};
 
+			/**
+			 * add input property
+			 * @edit by sair
+			 */
+			if (options.input) {
+				ret.input = input
+			}
+
 			if (!dest) {
 				return ret;
 			}
