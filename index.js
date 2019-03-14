@@ -27,11 +27,16 @@ const handleFile = (input, output, options) => fsP.readFile(input).then(data => 
 			};
 
 			/**
-			 * add input property
+			 * add `input`、`log` property
 			 * @edit by sair
 			 */
 			if (options.input) {
 				ret.input = input
+			}
+
+			if (options.log) {
+				const buffer2kb = (buffer) => (buffer.byteLength / 1024).toFixed(2) + 'kb';
+				console.log(`[${input}]: ${buffer2kb(data)} -> [${ret.path}]: ${buffer2kb(buffer)}`);
 			}
 
 			if (!dest) {

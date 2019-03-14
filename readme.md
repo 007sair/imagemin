@@ -2,21 +2,7 @@
 
 > Minify images seamlessly
 
-Fork自[https://github.com/imagemin/imagemin](https://github.com/imagemin/imagemin)，在返回数据中增加了`input`字段
-
-```js
-// old
-{
-	data: <Buffer>,
-	path: <String>
-}
-// new
-{
-	data: <Buffer>,
-	path: <String>,
-	input: <String>
-}
-```
+Fork自[https://github.com/imagemin/imagemin](https://github.com/imagemin/imagemin)
 
 ## Install
 
@@ -70,6 +56,18 @@ Set the destination folder to where your files will be written. If no destinatio
 #### options
 
 Type: `Object`
+
+##### input
+
+Type: `boolean`
+
+为 true 时返回的数据中会携带 input 属性，值为源文件path，字符串类型。默认为`false`。
+
+##### log
+
+Type: `boolean`
+
+为 true 时会在控制台输出 压缩信息，格式：`[源文件]: 大小(kb) -> [压缩后的文件]: 大小(kb)`，默认为`false`。
 
 ##### plugins
 
