@@ -34,6 +34,7 @@ const imageminPngquant = require('imagemin-pngquant');
 
 (async () => {
 	const files = await imagemin(['images/*.{jpg,png}'], 'build/images', {
+		input: true, // 如果有这个字段，返回结果中就会新增 input 字段
 		plugins: [
 			imageminJpegtran(),
 			imageminPngquant({
